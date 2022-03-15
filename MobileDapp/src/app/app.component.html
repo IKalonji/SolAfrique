@@ -1,0 +1,24 @@
+<ion-app>
+  <ion-content>
+    <div class="content" *ngIf="!signedIn">
+      <div style="height: 80%; width: 80%; margin: 82px auto 32px;"><img src="./../assets/img/SolAfrique.png" alt=""></div>
+      <h1 class="title"></h1>
+      <div>
+        <div class="card-container">
+          <button class="card card-small" (click)="login()">Sign up/Login</button>
+        </div>
+      </div>
+    </div>
+    <router-outlet *ngIf="signedIn"></router-outlet>
+  </ion-content>
+  <ion-footer *ngIf="signedIn">
+    <ion-toolbar>
+      <ion-button (click)="logout()" expand="block" fill="clear" shape="round">
+        Logout
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
+
+
+
