@@ -135,7 +135,7 @@ Please install the below required software in order to run the project.
 
 ### Installation
 
-#### NOTE: Please request CLIENT ID and CLIENT SECRET in order to test with the Unstoppable Domains integration.  
+#### NOTE: Please request CLIENT ID and CLIENT SECRET in order to test with the Web3Auth (Default values provided in app.component.ts file).  
 
 1. Get a free Tatum API Key at [Tatum](https://tatum.io/)
 2. Clone the repo
