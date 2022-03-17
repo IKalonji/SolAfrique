@@ -24,8 +24,8 @@
     <a href="https://github.com/IKalonji/SolAfrique/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <!-- <a href="https://www.youtube.com/watch?v=T4ouxpaDafk">View Demo</a>
-    · -->
+    <a href="https://www.youtube.com/watch?v=N76TsQxOQp8">View Demo</a>
+    ·
     <a href="https://github.com/IKalonji/SolAfrique/issues">Report Bug</a>
     ·
     <a href="https://github.com/IKalonji/SolAfrique/issues">Request Feature</a>
@@ -198,10 +198,10 @@ Please install the below required software in order to run the project.
 ## Usage
 
 VIDEO DEMO COMING SOON
-<!-- [Video Demo](https://www.youtube.com/watch?v=T4ouxpaDafk) -->
+[Video Demo](https://www.youtube.com/watch?v=N76TsQxOQp8)
 
 
-<!-- [![DEMO](https://img.youtube.com/vi/T4ouxpaDafk/0.jpg)](https://www.youtube.com/watch?v=T4ouxpaDafk) -->
+[![DEMO](https://img.youtube.com/vi/N76TsQxOQp8/0.jpg)](https://www.youtube.com/watch?v=N76TsQxOQp8)
 
 _Please refer to the [Documentation](https://github.com/IKalonji/SolAfrique/blob/main/README.md)_
 

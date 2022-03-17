@@ -32,6 +32,7 @@ def initialize():
 
 #Application endpoints
 @app.route('/user/<username>', methods=['GET'])
+@cross_origin()
 def user(username):
     global wallet
     user = None
@@ -47,6 +48,7 @@ def user(username):
     return jsonify(response), 200
 
 @app.route('/contacts/<username>', methods=['GET'])
+@cross_origin()
 def contacts(username):
     global wallet
     contacts = get_contacts(username)
@@ -58,6 +60,7 @@ def contacts(username):
     return jsonify(response), 200
 
 @app.route('/balance/<username>', methods=['GET'])
+@cross_origin()
 def balance(username):
     global wallet
     account_id = accounts_dict[username].user["account_id"]
@@ -70,6 +73,7 @@ def balance(username):
     return jsonify(response), 200
 
 @app.route('/transactions/<username>', methods=['GET'])
+@cross_origin()
 def transactions(username):
     global wallet
     account_id = accounts_dict[username].user["account_id"]
@@ -82,6 +86,7 @@ def transactions(username):
     return jsonify(response), 200
 
 @app.route('/top-up/<username>', methods=['POST'])
+@cross_origin()
 def top_up(username):
     global wallet
     request_body = request.get_json(force=True)
@@ -96,6 +101,7 @@ def top_up(username):
     return jsonify(response), 200
 
 @app.route('/payment/<username>', methods=['POST'])
+@cross_origin()
 def payment(username):
     global wallet
     request_body = request.get_json(force=True)
@@ -121,6 +127,7 @@ def payment(username):
     return jsonify(response), 200
 
 @app.route('/escrow-pay/<username>', methods=['POST'])
+@cross_origin()
 def escrow_pay(username):
     global wallet
     request_body = request.get_json(force=True)
@@ -146,6 +153,7 @@ def escrow_pay(username):
     return jsonify(response), 200
 
 @app.route('/escrow-clear/<username>', methods=['POST'])
+@cross_origin()
 def escrow_clear(username):
     global wallet
     request_body = request.get_json(force=True)
@@ -160,6 +168,7 @@ def escrow_clear(username):
     return jsonify(response), 200
 
 @app.route('/ussd', methods = ['GET', 'POST'])
+@cross_origin()
 def ussd_request():
     #NEXT ITERATION (process ussd requests)
     pass
