@@ -35,7 +35,7 @@ def create_wallet(api_key):
 
 def create_virtual_currency(api_key):
     conn = http.client.HTTPSConnection("api-eu1.tatum.io")
-    payload = "{\"name\":\"SolA\",\"supply\":\"1000000000\",\"basePair\":\"ZAR\",\"baseRate\":1,\"customer\":{\"accountingCurrency\":\"ZAR\",\"customerCountry\":\"SA\",\"externalId\":\"123654\",\"providerCountry\":\"SA\"},\"description\":\"SolAfrique.\",\"accountCode\":\"Main_Account\",\"accountNumber\":\"1234567890\",\"accountingCurrency\":\"ZAR\"}"
+    payload = "{\"name\":\"VC_SolA\",\"supply\":\"1000000000\",\"basePair\":\"ZAR\",\"baseRate\":1,\"customer\":{\"accountingCurrency\":\"ZAR\",\"customerCountry\":\"SA\",\"externalId\":\"123654\",\"providerCountry\":\"SA\"},\"description\":\"SolAfrique.\",\"accountCode\":\"Main_Account\",\"accountNumber\":\"1234567890\",\"accountingCurrency\":\"ZAR\"}"
     headers = {
         'content-type': "application/json",
         'x-api-key': api_key
