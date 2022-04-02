@@ -48,7 +48,7 @@ def create_virtual_currency(api_key):
 def get_virtual_currency(api_key):
     conn = http.client.HTTPSConnection("api-eu1.tatum.io")
     headers = { 'x-api-key': api_key }
-    conn.request("GET", "/v3/ledger/virtualCurrency/VC_ZAR", headers=headers)
+    conn.request("GET", "/v3/ledger/virtualCurrency/VC_SolA", headers=headers)
     res = conn.getresponse()
     data = res.read()
     return json.loads(data.decode("utf-8"))
