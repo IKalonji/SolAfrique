@@ -15,7 +15,7 @@ class MainWallet():
         wallet_data = create_wallet(self.key)
         print("Wallet-data: ", wallet_data)
         self.address = wallet_data['address']
-        self.secret = wallet_data['secret']
+        self.secret = wallet_data['privateKey']
         main_account = create_virtual_currency(self.key)
         if 'errorCode' in main_account.keys():
             main_account = get_virtual_currency(self.key)
@@ -27,7 +27,7 @@ class MainWallet():
 def create_wallet(api_key):
     conn = http.client.HTTPSConnection("api-eu1.tatum.io")
     headers = { 'x-api-key': api_key}
-    conn.request("GET", "/v3/algorand/wallet", headers=headers)
+    conn.request("GET", "/v3/solana/wallet", headers=headers)
     res = conn.getresponse()
     data = res.read()
     return json.loads(data.decode("utf-8")) 
@@ -35,7 +35,7 @@ def create_wallet(api_key):
 
 def create_virtual_currency(api_key):
     conn = http.client.HTTPSConnection("api-eu1.tatum.io")
-    payload = "{\"name\":\"VC_ZAR\",\"supply\":\"1000000000\",\"basePair\":\"ZAR\",\"baseRate\":1,\"customer\":{\"accountingCurrency\":\"ZAR\",\"customerCountry\":\"SA\",\"externalId\":\"123654\",\"providerCountry\":\"SA\"},\"description\":\"Mbongo Virtual Currency.\",\"accountCode\":\"Main_Account\",\"accountNumber\":\"1234567890\",\"accountingCurrency\":\"ZAR\"}"
+    payload = "{\"name\":\"SolA\",\"supply\":\"1000000000\",\"basePair\":\"ZAR\",\"baseRate\":1,\"customer\":{\"accountingCurrency\":\"ZAR\",\"customerCountry\":\"SA\",\"externalId\":\"123654\",\"providerCountry\":\"SA\"},\"description\":\"SolAfrique.\",\"accountCode\":\"Main_Account\",\"accountNumber\":\"1234567890\",\"accountingCurrency\":\"ZAR\"}"
     headers = {
         'content-type': "application/json",
         'x-api-key': api_key
